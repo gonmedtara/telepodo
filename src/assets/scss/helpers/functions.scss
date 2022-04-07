@@ -1,0 +1,32 @@
+@import "./mixins.scss";
+@each $name, $hex in $basse-colors {
+  .btn-cl-#{$name} {
+    background-color: $hex;
+    color: white;
+    border-radius: 8px;
+    border: 0px;
+    &:hover {
+      background-color: $hex;
+      color: white;
+      opacity: 0.5;
+    }
+    &:focus {
+      background-color: $hex;
+      color: white;
+      opacity: 0.5;
+    }
+  }
+}
+
+@each $name, $hex in $basse-colors {
+  .btn-dr-#{$name} {
+    background-color: $hex;
+    color: $base-color-1;
+  }
+}
+
+@each $name, $hex in $basse-colors {
+  .text-#{$name} {
+    color: $hex;
+  }
+}

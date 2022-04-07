@@ -1,0 +1,20 @@
+@import "../helpers/mixins.scss";
+.home {
+  height: 100vh;
+  .el-container {
+    height: 100vh;
+    .el-aside {
+      background-color: $base-color-3;
+      transition: width 1s;
+      &.oppened {
+        width: 250px;
+      }
+      &.closed {
+        width: 105px;
+        .aside-c {
+          position: initial;
+        }
+      }
+    }
+  }
+}

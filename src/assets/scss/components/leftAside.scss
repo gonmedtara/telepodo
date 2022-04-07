@@ -1,0 +1,70 @@
+@import "../helpers/mixins.scss";
+
+.aside-c {
+  padding: 20px;
+  position: relative;
+  &-header {
+    .app-logo {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      background-color: $base-color-4;
+      float: left;
+      margin-right: 15px;
+    }
+    .app-name {
+      height: 45px;
+      line-height: 45px;
+      font-size: larger;
+      font-weight: bold;
+      color: $base-color-1;
+      transition: opacity 0.9s;
+    }
+    &.closed-aside {
+      .app-logo {
+        margin-left: 10px;
+      }
+      .app-name {
+        opacity: 0;
+      }
+      .aside-c-resize {
+        background-color: $base-color-3;
+        left: 90px;
+      }
+    }
+  }
+  &-resize {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: left 0.8s;
+    cursor: pointer;
+    &:hover {
+      background-color: $base-color-2;
+    }
+    .el-icon {
+      color: $base-color-1;
+    }
+  }
+  &-menu {
+    padding-top: 75px;
+    .el-menu {
+      background-color: transparent;
+      border: 0px;
+      .el-menu-item {
+        border-radius: 10px;
+        &.is-active {
+          color: $base-color-4;
+        }
+      }
+    }
+  }
+}
